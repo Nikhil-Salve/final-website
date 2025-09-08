@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — iSync Hub</title>
+  <meta name="description" content="Read iSync Hub's privacy policy. We value your trust and ensure your data is safe." />
+  <link rel="icon" href="logo.png" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --brand: #24A19C;
+      --brand-light: #FAEEE7;
+      --accent: #325288;
+      --shadow: 0 10px 30px rgba(36,161,156,.3);
+      --radius: 18px;
+      --maxw: 1200px;
+    }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, sans-serif;
+      background: linear-gradient(180deg,#0b1226 0%, #0f172a 35%, #0a1517 100%);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--maxw); margin: auto; padding: 24px; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(15,23,42,.7);
+      backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav__inner { display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand img { width: 70px; height: 70px; border-radius: 20%; object-fit: cover; }
+    .nav__links { display: flex; gap: 18px; }
+    .nav__links a {
+      padding: 10px 14px; border-radius: 10px; color: var(--text);
+      transition: background .3s;
+    }
+    .nav__links a:hover { background: rgba(255,255,255,.08); }
+    .nav__cta { background: var(--brand); color: #052524; box-shadow: var(--shadow); }
+    .nav__toggle { display: none; background: transparent; color: var(--text); }
+    @media (max-width: 860px) {
+      .nav__links { display: none; }
+      .nav__toggle { display: inline-flex; }
+      .nav.open .nav__links {
+        display: flex; flex-direction: column;
+        position: absolute; left: 0; right: 0; top: 100px;
+        background: #0b1226; padding: 14px 24px;
+      }
+    }
+
+    /* PAGE CONTENT */
+    main { padding: 70px 24px; max-width: 900px; margin: auto; }
+    h1, h2 { color: var(--brand); }
+    p { margin-bottom: 18px; color: var(--muted); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 28px 0; text-align: center; color: var(--muted);
+    }
+    footer nav { margin-top: 12px; }
+    footer nav a { margin: 0 10px; font-size: 14px; color: var(--muted); }
+    footer nav a:hover { color: var(--brand); }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="iSync Hub logo" /></a>
+      <nav class="nav__links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact" class="nav__cta">Contact</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle">☰</button>
+    </div>
+  </header>
+
+  <!-- PRIVACY POLICY -->
+  <main>
+    <h1>Privacy Policy</h1>
+    <p>At iSync Hub, your privacy is very important to us. This policy outlines how we collect, use, and safeguard your information when you interact with our website and services.</p>
+
+    <h2>Information We Collect</h2>
+    <p>We may collect personal details such as your name, email address, and phone number when you contact us. Additionally, we may collect non-personal information such as browser type, device, and usage statistics for improving our services.</p>
+
+    <h2>How We Use Your Information</h2>
+    <p>Your information is used only to provide services, respond to inquiries, improve user experience, and send updates related to our offerings. We never sell or rent your personal data to third parties.</p>
+
+    <h2>Data Security</h2>
+    <p>We implement strict technical and organizational measures to protect your data from unauthorized access, loss, or misuse.</p>
+
+    <h2>Cookies</h2>
+    <p>Our website may use cookies to enhance user experience. You can disable cookies in your browser settings if you prefer.</p>
+
+    <h2>Third-Party Links</h2>
+    <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of external sites.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. The latest version will always be available on this page.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please <a href="index.html#contact">contact us</a>.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 iSync Hub. All Rights Reserved.</p>
+    <nav>
+      <a href="index.html">Home</a> | 
+      <a href="index.html#about">About</a> | 
+      <a href="index.html#services">Services</a> | 
+      <a href="index.html#contact">Contact</a> | 
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('.nav');
+    const toggle = document.getElementById('navToggle');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
